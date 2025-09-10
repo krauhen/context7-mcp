@@ -1,0 +1,14 @@
+services:
+  context7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: context7
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    restart: unless-stopped
+    volumes:
+      - ./data/certs/cert.pem:/etc/tls/cert.pem:ro
+      - ./data/certs/key.pem:/etc/tls/key.pem:ro
