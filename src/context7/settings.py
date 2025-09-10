@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     minimum_tokens: int = Field(description="Minimum tokens")
     api_key: SecretStr = Field(description="API key")
 
+    fastmcp_experimental_enable_new_openapi_parser: bool = Field(description="Enable new openapi parser in FastAPI-MCP")
+
     def __str__(self):
         secret_terms = ["secret", "password"]
 

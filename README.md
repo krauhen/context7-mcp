@@ -24,3 +24,4 @@ $ uv venv .venv
 (.venv)$ source .venv/bin/activate
 (.venv)$ uv sync
 (.venv)$ uv sync --extra dev
+(.venv)$ CERT_FILE=data/certs/cert.pem KEY_FILE=data/certs/key.pem python src/main.py
